@@ -15,21 +15,12 @@ import javafx.scene.control.TextInputDialog;
 
 
 
-public class HelloApplication extends Application {
+public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("try.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        //scene.getStylesheets().add("hello.css");
-
-
-
-        //Button button = (Button) scene.lookup("#hello");
-        //button.setText("bla");
-
-
-
+        stage.setTitle("Anton, Baron, and Philipp's Project 2");
         stage.setScene(scene);
 
         stage.show();
@@ -47,7 +38,7 @@ public class HelloApplication extends Application {
 
         Button goodbye = (Button) scene.lookup("#goodbye");
 
-        TextField textfield = (TextField) scene.lookup("#textfield");
+        TextArea textArea = (TextArea) scene.lookup("#textarea");
 
 
         MenuBar menubar = (MenuBar) scene.lookup("#menubar");
@@ -55,9 +46,6 @@ public class HelloApplication extends Application {
         Menu menu = (Menu) menubar.getMenus().get(0);
 
         MenuItem reset = (MenuItem) menu.getItems().get(0);
-
-        reset.setText("khuy");
-
 
     }
 
