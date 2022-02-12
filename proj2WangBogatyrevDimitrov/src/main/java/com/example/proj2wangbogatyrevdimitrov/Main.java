@@ -33,6 +33,12 @@ public class Main extends Application {
 	
 	public void configureGoodbyeButton(Scene scene){
 		Button goodbye = (Button) scene.lookup("#goodbye");
+		TextArea textArea = (TextArea) scene.lookup("#textarea");
+		goodbye.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent t) {
+                textArea.appendText("Goodbye");
+            }
+        });	
 	}
 	
 	public void configureMenuBar(Scene scene){
